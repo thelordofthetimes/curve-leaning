@@ -8,8 +8,49 @@ update on: 2015-09-06
 table of contents
 
    1. detect hardware........................................................001
+   2. benchmark hardware.....................................................001
 
 
 1. detect hardware
 
+   detect center processing unit
+
+      lscpu
    
+   detect general hardware as cpu, memory, disk, networkcontroller...
+
+      lshw
+
+   list all bus
+
+      lspci
+
+   list scsi/sata devices
+
+      lsscsi
+
+   list general hardware without technical, easy to read
+
+      inxi -Fx
+
+   list disk, size, space
+
+      df -H
+
+
+2. benchmark hardware
+
+   benchmark cpu
+
+      sysbench --test=cpu --cpu-max-prime=20000 run
+
+   benchmark io
+
+      sysbench --test=fileio --file-total-size=150G perpare
+
+      sysbench --test=fileio --file-total-size=150G --file-test-mode=rndrw \
+      --init-rng=on --max-time=300 --max-requests=0 run
+
+    benchmark memory
+
+      sysbench --test=memory --memory-block-size=1M --memory-total-size=10G run
