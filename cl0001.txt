@@ -1,0 +1,15 @@
+curve learning                                                      bui tuan anh
+start on: 2015-09-06
+update on: 2015-09-06
+
+
+                           linux check hardware
+
+table of contents
+
+   1. detect hardware........................................................001
+
+
+1. detect hardware
+
+   
